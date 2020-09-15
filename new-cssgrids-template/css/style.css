@@ -37,54 +37,118 @@ section {
 
 
 @media screen and (max-width: 768px) {
-.section-1 {
-    display: grid;
-    text-align: center;
-	border: 3px solid black;
-	margin: 15px;
-  }
+
+	#container {
+	 display: grid;
+	 grid-template-columns: 100%;
+	 grid-auto-rows: minmax(100px, auto);
+	 border: 1px solid black;
+     margin-left: 15px;
+     margin-right: 15px;
+     gap: 1em;}
   
-  .box1, .box2, .box3 {
-	display: grid;
-	grid-template-columns: auto;
-	border: 3px solid black;
-	margin: 15px;
-    padding: 30px;
-    text-align: center;
-  }
+    #boxes {
+	 display: grid;
+	 grid-template-columns: auto;
+	 grid-auto-rows: minmax(100px, auto);
+	 margin-left: 15px;
+     margin-right: 15px; }
+	
+	.box1, .box2, .box3 {
+	 display: grid;
+	 grid-template-columns: auto;
+	 border: 1px solid black;
+	}
   
-  .content {
+	#section-3 {
+	 display: grid;
+	 grid-template-columns: auto;
+	 grid-auto-rows: minmax(100px, auto);
+	 margin-left: 15px;
+     margin-right: 15px;
+	}
+
+  .content{
     display: grid;
 	grid-template-rows: 100%;
-	gap: 1em;
-	padding: 30px;
-	margin: 15px;
-    text-align: center;
-    border: 3px solid black;
-  }
+    border: 1px solid black;}
 
   .sidebar {
 	display: grid;
 	grid-template-rows: 100%;
-	gap: 1em;
-	padding: 30px;
-	margin: 15px;
-    text-align: center;
-    border: 3px solid black;
-  }
+    border: 1px solid black;}
 
-.section-5 {
+  .footers {
 	display: grid;
-	border: 3px solid black;
-	margin: 15px;
-}
+	grid-template-columns: 100%;
+	border: 1px solid black;
+	margin-left: 15px;
+    margin-right: 15px;}
 
   .footer1, .footer2, .footer3, .footer4 {
 	display: grid;
 	grid-template-columns: 100%;
 	padding: 30px;
 	margin: 10px;
-    text-align: center;
-    border: 2px solid black;
-  }
+    border: 1px solid black;}
+}
+
+@media screen and (max-width: 960px) and (min-width: 768px) {
+
+   #container {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-auto-rows: minmax(150px, auto);
+	margin-left: 45px;
+	margin-right: 45px;
+	}
+ 
+   .header {
+    display: grid;
+	grid-template-columns: auto;
+	border: 1px solid black;
+	}
+	
+   #boxes {
+	display: grid;
+	grid-template-columns: 33% 33% 33%; /*går inte med 1fr?*/
+	grid-auto-rows: minmax(150px, auto);
+	margin-left: 45px;
+	margin-right: 70px;
+	grid-gap: 1em;	}
+
+   .box1, .box2, .box3 {
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+	border: 1px solid black;
+	}
+
+   #section-3 {
+	display: grid;
+	grid-template-columns: 50% 50%; /*går inte med 1fr?*/
+	grid-auto-rows: minmax(150px, auto);
+	margin-left: 45px;
+	margin-right: 65px;
+	grid-gap: 1em; }
+
+   .content, .sidebar {
+	display: grid;
+	border: 1px solid black;
+		}
+
+   .footers {
+	display:grid;
+	grid-template-columns: 50% 50%;
+	border: 1px solid black;
+	grid-auto-rows: minmax(150px, auto);
+    margin-left: 45px;
+	margin-right: 50px;
+	grid-gap: 1em;
+	padding: 20px;
+		}
+	
+   .footer1, .footer2, .footer3, .footer4 {
+	display: grid; 
+	border: 1px solid black;
+	}
 }
